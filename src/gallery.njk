@@ -12,9 +12,9 @@ description: Photos and game film of Jules Lamon, from the courtroom to the cour
     {%- for item in gallery.items %}
     <figure class="tile{% if not item.isImage %} video{% endif %}" style="aspect-ratio: {{ item.ratio }}">
       {%- if item.isImage %}
-      <a href="{{ item.thumb }}"><img src="{{ item.thumb }}" alt="Photo of Jules Lamon" loading="lazy"></a>
+      <a href="{{ item.thumb }}" aria-label="Open photo {{ loop.index }} full size"><img src="{{ item.thumb }}" alt="Photo {{ loop.index }} of Jules Lamon{% if item.takenAt %}, {{ item.takenAt | readableDate }}{% endif %}" loading="lazy"></a>
       {%- else %}
-      <video controls preload="none" poster="{{ item.thumb }}" src="{{ item.video }}"></video>
+      <video controls preload="none" poster="{{ item.thumb }}" src="{{ item.video }}" aria-label="Video: basketball game film{% if item.takenAt %}, {{ item.takenAt | readableDate }}{% endif %}"></video>
       {%- endif %}
     </figure>
     {%- endfor %}

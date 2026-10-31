@@ -9,10 +9,14 @@
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:image" content="{{ site.url }}/assets/img/jules-headshot.jpg">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="{% if layout == 'post.njk' %}article{% else %}website{% endif %}">
+  <meta name="twitter:card" content="summary">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/">Jules Lamon</a>
@@ -26,7 +30,7 @@
       </nav>
     </div>
   </header>
-  <main class="wrap">
+  <main id="main" class="wrap" tabindex="-1">
     {{ content | safe }}
   </main>
   <footer class="site-footer">

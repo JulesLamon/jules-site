@@ -7,6 +7,6 @@ Pre-law **English & Political Science** student-athlete at **New College of Flor
 - 🏀 Versatile on the court: played every position, from sixth man to starter and team leader
 - ✍️ I write about law, politics, and literature
 
-🌐 **Website:** [jules.lamons.org](https://jules.lamons.org) · 💼 [LinkedIn](https://www.linkedin.com/in/julianna-lamon-b510a428a/) · ✉️ jules.lamon@lamons.org
+🌐 **Website:** [jules.lamons.org](https://jules.lamons.org) · 💼 [LinkedIn](https://www.linkedin.com/in/julianna-lamon/) · ✉️ jules.lamon@lamons.org
 
 📂 This website's source: [jules-site](https://github.com/JulesLamon/jules-site)

@@ -1,0 +1,7 @@
+[
+  { "url": "/about/", "label": "About" },
+  { "url": "/research/", "label": "Legal & Research" },
+  { "url": "/athletics/", "label": "Athletics" },
+  { "url": "/writing/", "label": "Writing" },
+  { "url": "/gallery/", "label": "Gallery" }
+]

@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Writing
+permalink: /writing/
+description: Essays and research by Jules Lamon.
+---
+<article class="page">
+  <h1>Writing</h1>
+  <p class="lede">Essays and research papers, from community college to New College.</p>
+  {%- if not collections.posts.length %}<p>No essays have been published yet.</p>{% endif %}
+  <ul class="post-list">
+    {%- for post in collections.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      <span class="muted">{{ post.date | readableDate }}{% if post.data.course %} · {{ post.data.course }}{% endif %}</span>
+      {% if post.data.summary %}<p>{{ post.data.summary }}</p>{% endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</article>

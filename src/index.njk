@@ -1,0 +1,43 @@
+---
+layout: base.njk
+description: Jules Lamon is a pre-law English and Political Science student-athlete at New College of Florida.
+---
+<section class="hero">
+  <img class="portrait" src="/assets/img/jules-headshot.jpg" alt="Portrait of Jules Lamon" width="360" height="541">
+  <div>
+    <p class="kicker">Pre-law · New College of Florida · Women's Basketball</p>
+    <h1>Hi, I'm Jules.</h1>
+    <p class="lede">I study English and Political Science at New College of Florida and play on the women's basketball team. I'm drawn to legal research, careful writing, and the law that shapes athletes' lives, from the Constitution to NIL.</p>
+    <p class="actions">
+      <a class="btn" href="{{ site.resume }}">View résumé</a>
+      <a class="btn ghost" href="{{ site.linkedin }}">LinkedIn</a>
+      <a class="btn ghost" href="mailto:{{ site.email }}">Email me</a>
+    </p>
+  </div>
+</section>
+
+<section class="cards">
+  <a class="card" href="/research/">
+    <h2>Legal research &amp; writing</h2>
+    <p>Top student in my Torts seminar, with perfect scores on every exam. Now researching consent and the law in Samuel Richardson's <cite>Clarissa</cite> for my senior thesis.</p>
+  </a>
+  <a class="card" href="/research/#mock-trial">
+    <h2>Mock trial</h2>
+    <p>Lead attorney for the defense at a mock trial camp at the Hillsborough County Courthouse, and winner of Best Defense Witness.</p>
+  </a>
+  <a class="card" href="/athletics/">
+    <h2>Athletics</h2>
+    <p>NCF women's basketball (NAIA). Selected for the 2024 NCAA College Basketball Academy, AAU tournament MVP, and a competitor in nearly every sport.</p>
+  </a>
+  {%- if collections.posts.length %}
+  <a class="card" href="/writing/">
+    <h2>Writing</h2>
+    <p>Latest: <em>{{ collections.posts[0].data.title }}</em></p>
+  </a>
+  {%- else %}
+  <a class="card" href="/gallery/">
+    <h2>Gallery</h2>
+    <p>Photos and game film from the courtroom to the court.</p>
+  </a>
+  {%- endif %}
+</section>

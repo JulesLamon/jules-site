@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: Gallery
+permalink: /gallery/
+description: Photos and game film of Jules Lamon, from the courtroom to the court.
+---
+<article class="page wide">
+  <h1>Gallery</h1>
+  <p class="lede">From the courtroom to the court.{% if gallery.available %} <a href="{{ gallery.shareUrl }}">Open the full album</a>.{% endif %}</p>
+  {%- if gallery.items.length %}
+  <div class="gallery">
+    {%- for item in gallery.items %}
+    <figure class="tile{% if not item.isImage %} video{% endif %}" style="aspect-ratio: {{ item.ratio }}">
+      {%- if item.isImage %}
+      <a href="{{ item.thumb }}"><img src="{{ item.thumb }}" alt="Photo of Jules Lamon" loading="lazy"></a>
+      {%- else %}
+      <video controls preload="none" poster="{{ item.thumb }}" src="{{ item.video }}"></video>
+      {%- endif %}
+    </figure>
+    {%- endfor %}
+  </div>
+  {%- else %}
+  <p>The photo album couldn't be reached when this page was built. You can <a href="{{ gallery.shareUrl }}">view it on photos.lamons.org</a>.</p>
+  {%- endif %}
+</article>
